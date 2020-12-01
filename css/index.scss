@@ -1,0 +1,62 @@
+$text: #151515;
+$textGray: #858585;
+$textWhite: #fff;
+$bannerBG: #d9d9d7;
+
+$photoTemp: #a7a7a7;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  color: $text;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.container {
+  max-width: 1920px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+  background-color: transparent;
+}
+
+// MAIN_PAGE
+
+@import "./scss/header";
+@import "./scss/mainBanner";
+@import "./scss/bullets";
+@import "./scss/mvp";
+@import "./scss/add";
+@import "./scss/footer";
+
+// SHOP
+
+@import "./scss_shop/shop_main";
+@import "./scss_card/card_main";
+
+// MEDIA
+
+@import "./scss/media";
+@import "./scss_shop/shop_media";
+@import "./scss_card/card_media";

@@ -1,0 +1,41 @@
+@media (min-width: 375px) {
+  @include header375;
+  @include banner375;
+  @include bullets375;
+  @include mvp375;
+  @include footer375;
+}
+@media (min-width: 480px) {
+  @include header480;
+  @include banner480;
+  @include bullets480;
+  @include mvp480;
+}
+@media (min-width: 640px) {
+  @include header640;
+  @include banner640;
+  @include bullets640;
+  @include mvp640;
+  @include footer640;
+}
+@media (min-width: 768px) {
+  @include banner768;
+  @include bullets768;
+  @include mvp768;
+  @include footer768;
+}
+@media (min-width: 860px) {
+  @include bullets860;
+}
+@media (min-width: 1024px) {
+  @include header1024;
+  @include banner1024;
+  @include mvp1024;
+}
+@media (min-width: 1440px) {
+  @include banner1440;
+  @include bullets1440;
+  @include mvp1440;
+}
+
+

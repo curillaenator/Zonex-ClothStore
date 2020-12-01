@@ -1,0 +1,22 @@
+@media (min-width: 375px) {
+  @include shop_banner375;
+  @include shop_market375;
+}
+@media (min-width: 480px) {
+  @include shop_banner480;
+  @include shop_market480;
+}
+@media (min-width: 640px) {
+  @include shop_banner640;
+  @include shop_market640;
+}
+@media (min-width: 768px) {
+  @include shop_market768;
+}
+@media (min-width: 1024px) {
+  @include shop_banner1024;
+  @include shop_market1024;
+}
+@media (min-width: 1440px) {
+  @include shop_market1440;
+}

@@ -1,0 +1,395 @@
+.c__block {
+  height: 100px;
+  width: 100%;
+}
+.c_breadcrumbs {
+  display: flex;
+  align-items: center;
+  height: 24px;
+  margin-bottom: 30px;
+  padding: 0 50px;
+  & > a {
+    margin-right: 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $textGray;
+    &:hover {
+      color: $text;
+    }
+  }
+  & > p {
+    font-size: 10px;
+    margin-right: 16px;
+  }
+}
+
+.c__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 15px 0 30px;
+  margin-bottom: 70px;
+  .c__bodyPhotos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    // margin-right: 15px;
+    // background-color: yellowgreen;
+    .c__bodyPhotosThumbs {
+      display: flex;
+      flex-wrap: wrap;
+      // align-items: flex-start;
+      width: 100%;
+      .c__bodyPhotosThumbsItem {
+        width: calc(33.33% - 15px);
+        // height: 33%;
+        overflow: hidden;
+        margin-bottom: 15px;
+        margin-right: 15px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $text;
+          opacity: 0;
+          transition: 0.1s ease-in-out;
+        }
+        &:hover::after {
+          opacity: 0.1;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    .c__bodyPhotosShow {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding-right: 15px;
+      margin-bottom: 15px;
+      & > img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .c__bodyDesc {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-right: 15px;
+    // background-color: yellow;
+    .c__bodyDescSts {
+      display: flex;
+      font-size: 10px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      & > img {
+        margin-right: 6px;
+      }
+    }
+    .c__bodyDescName {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    .c__bodyDescRating {
+      display: flex;
+      margin-bottom: 36px;
+      .c__bodyDescRatingStar {
+        margin-right: 5px;
+        .c__bodyStarRate {
+          margin-right: 0px;
+          cursor: pointer;
+        }
+      }
+      .c__bodyDescRatingRev {
+        text-decoration: none;
+        color: $text;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .c__bodyDescPrice {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 36px;
+      .c__bodyDescPriceNew {
+        font-size: 24px;
+        font-weight: 700;
+        margin-right: 24px;
+        color: $text;
+        //   background-color: teal;
+      }
+      .c__bodyDescPriceOld {
+        font-size: 16px;
+        font-weight: 500;
+        color: $textGray;
+        text-decoration: line-through;
+        //   background-color: teal;
+      }
+    }
+    .c__bodyDescDesc {
+      font-size: 13px;
+      font-weight: 500;
+      color: $text;
+      margin-bottom: 36px;
+    }
+    .c__bodyDescColor {
+      margin-bottom: 36px;
+      .c__bodyDescColorTtl {
+        display: flex;
+        margin-bottom: 16px;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        .c__bodyDescColorTtlItem {
+          color: $textGray;
+          margin-right: 6px;
+        }
+        .c__bodyColorSelected {
+          color: $text;
+        }
+      }
+      .c__bodyDescColorSelect {
+        display: flex;
+        align-items: center;
+        //   background-color: yellow;
+        height: 34px;
+        .c__bodyDescColorSelectValue {
+          display: block;
+          cursor: pointer;
+          height: 24px;
+          width: 24px;
+          background-color: red;
+          margin-right: 12px;
+          border-radius: 12px;
+          opacity: 0.7;
+          &::before {
+            content: "";
+            width: 32px;
+            height: 32px;
+            display: block;
+            border: 2px solid $textGray;
+            border-radius: 16px;
+            transform: translate(-4px, -4px);
+          }
+          &:hover::before {
+            border: 2px solid $text;
+          }
+        }
+        .colorColorSelected {
+          opacity: 1;
+        }
+      }
+    }
+    .c__bodyDescSize {
+      margin-bottom: 60px;
+      .c__bodyDescSizeTtl {
+        display: flex;
+        margin-bottom: 16px;
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        .c__bodyDescSizeTtlItem {
+          color: $textGray;
+          margin-right: 6px;
+        }
+        .c__bodySizeSelected {
+          color: $text;
+        }
+      }
+      .c__bodyDescSizeSelect {
+        display: flex;
+        align-items: center;
+        .c__bodyDescSizeSelectValue {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          height: 32px;
+          width: 42px;
+          border: 2px solid $textGray;
+          margin-right: 6px;
+
+          text-transform: uppercase;
+          font-size: 13px;
+          font-weight: 500;
+          color: $textGray;
+          &:hover {
+            color: $text;
+          }
+        }
+        .sizeSizeSelected {
+          border: 2px solid $text;
+          color: $text;
+        }
+      }
+    }
+    .c__bodyDescBtns {
+      .c__bodyDescBtnsQty {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 58px;
+        margin-bottom: 10px;
+        border: 1px solid $textGray;
+        .c__bodyDescBtnsQtyBtn {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 10%;
+          color: $textGray;
+          font-size: 30px;
+          font-weight: 500;
+          transition: 0.1s ease-in-out;
+          user-select: none;
+          &:hover {
+            color: $text;
+          }
+          &:active {
+            background-color: #eee;
+          }
+        }
+        & > input {
+          width: 80%;
+          text-align: center;
+          border: none;
+          font-family: "Jost", sans-serif;
+          color: $text;
+          font-size: 13px;
+          font-weight: 700;
+          &:focus {
+            outline: none;
+          }
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+          }
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            -moz-appearance: textfield;
+          }
+        }
+      }
+      .c__bodyDescBtnsAdd {
+        width: 100%;
+        height: 58px;
+        margin-bottom: 10px;
+        background-color: $text;
+        border: none;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: 0.1s ease-in-out;
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          background-color: #303030;
+        }
+        &:active {
+          background-color: $text;
+        }
+      }
+      .c__bodyDescBtnsWish {
+        width: 100%;
+        height: 58px;
+        background-color: #f2f2f2;
+        border: none;
+        cursor: pointer;
+        color: $text;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: 0.1s ease-in-out;
+
+        &:focus {
+          outline: none;
+        }
+        &:hover {
+          border: 2px solid $textGray;
+        }
+        &:active {
+          background-color: $textGray;
+          border: 2px solid $textGray;
+        }
+      }
+    }
+  }
+}
+
+@mixin card640 {
+  .c__body {
+    padding: 0 35px 0 50px;
+  }
+}
+
+@mixin card768 {
+  .c__body {
+    flex-direction: row;
+    padding: 0 50px;
+    .c__bodyPhotos {
+      width: 66.67%;
+      margin-right: 15px;
+    }
+    .c__bodyDesc {
+      width: 33.33%;
+      padding: 0;
+    }
+  }
+}
+
+@mixin card1024 {
+  .c__body {
+    .c__bodyPhotos {
+      flex-direction: row;
+      .c__bodyPhotosThumbs {
+        width: 20%;
+        .c__bodyPhotosThumbsItem {
+          width: calc(100% - 15px);
+        }
+      }
+      .c__bodyPhotosShow {
+        width: 80%;
+      }
+    }
+  }
+}
+@mixin card1440 {
+  .c__body {
+    .c__bodyPhotos {
+      .c__bodyPhotosThumbs {
+        width: 40%;
+        .c__bodyPhotosThumbsItem {
+          width: calc(33.33% - 15px);
+        }
+      }
+      .c__bodyPhotosShow {
+        width: 60%;
+      }
+    }
+  }
+}

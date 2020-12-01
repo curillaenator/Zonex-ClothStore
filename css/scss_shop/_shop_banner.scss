@@ -1,0 +1,193 @@
+.shop__bannerSection {
+  margin-bottom: 30px;
+}
+.shop__bannerSlider {
+  position: relative;
+  .shop__bannerArrows {
+    display: none;
+    height: 48px;
+    width: 48px;
+    border: 2px solid $text;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.1s ease-in-out;
+    &:hover {
+      transform: scale(1.03) translateY(-50%);
+    }
+  }
+  .shopPrevArrow {
+    background-image: url(../img/shop/icons/prev.png);
+    left: 4%;
+    &:active {
+      background-image: url(../img/shop/icons/prev_act.png);
+    }
+  }
+  .shopNextArrow {
+    background-image: url(../img/shop/icons/next.png);
+    right: 4%;
+    &:active {
+      background-image: url(../img/shop/icons/next_act.png);
+    }
+  }
+}
+.shop__bannerTrack {
+  display: block;
+  width: 100%;
+  height: 460px;
+  position: relative;
+  .shop__bannerBG1 {
+    background-color: $shopBannerBG1;
+  }
+  .shop__bannerBG2 {
+    background-color: $shopBannerBG1;
+  }
+  .shop__bannerItem {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    & > img {
+      position: absolute;
+      bottom: 0;
+      left: 42%;
+      height: 100%;
+    }
+    .shop__bannerItemContent {
+      width: fit-content;
+      position: absolute;
+      top: 50%;
+      left: 24px;
+      transform: translateY(-50%);
+      & > h1 {
+        color: $text;
+        font-size: 20px;
+        font-weight: 700;
+        max-width: 230px;
+        margin-bottom: 15px;
+      }
+      & > p {
+        color: $text;
+        max-width: 180px;
+        font-size: 13px;
+        font-weight: 500;
+        margin-bottom: 40px;
+      }
+      .shop__bannerItemContentButtons {
+        display: flex;
+        align-items: center;
+        .shop__bannerItemContentButtonsBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          width: 123px;
+          height: 48px;
+          margin-right: 25px;
+          background-color: $shopBannerBG1;
+          border: 2px solid $text;
+          transition: 0.1s linear;
+          &:hover {
+            transform: scale(1.03);
+          }
+          &:active {
+            background-color: $text;
+            color: $textWhite;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin shop_banner375 {
+  .shop__bannerTrack {
+    .shop__bannerItem {
+      & > img {
+        left: 50%;
+      }
+      .shop__bannerItemContent {
+        top: 50%;
+        left: 30px;
+        & > h1 {
+          font-size: 24px;
+          max-width: 250px;
+        }
+        & > p {
+          max-width: 200px;
+          font-size: 13px;
+        }
+        .shop__bannerItemContentButtons {
+          .shop__bannerItemContentButtonsBtn {
+            width: 146px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin shop_banner480 {
+  .shop__bannerTrack {
+    .shop__bannerItem {
+      & > img {
+        left: 57%;
+      }
+      .shop__bannerItemContent {
+        top: 50%;
+        left: 18%;
+        & > h1 {
+          font-size: 24px;
+          max-width: 250px;
+        }
+        & > p {
+          max-width: 250px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@mixin shop_banner640 {
+  .shop__bannerTrack {
+    .shop__bannerItem {
+      & > img {
+        left: 57%;
+      }
+      .shop__bannerItemContent {
+        top: 50%;
+        left: 15%;
+        & > h1 {
+          font-size: 24px;
+          max-width: 350px;
+        }
+        & > p {
+          max-width: 350px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@mixin shop_banner1024 {
+  .shop__bannerTrack {
+    .shop__bannerItem {
+      & > img {
+        left: 66%;
+      }
+      .shop__bannerItemContent {
+        & > h1 {
+          font-size: 36px;
+          max-width: 550px;
+        }
+        & > p {
+          max-width: 550px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+.banner {
+  display: block;
+  width: 100%;
+  height: 568px;
+  background-color: $bannerBG;
+  margin-bottom: 24px;
+  overflow: hidden;
+  .banner__content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    & > img {
+      position: absolute;
+      height: 480px;
+      bottom: 0;
+      left: 84%;
+      transform: translateX(-50%);
+      // opacity: 0.65;
+    }
+    .banner__content-text {
+      position: absolute;
+      top: 40%;
+      left: 24px;
+      transform: translateY(-50%);
+
+      & > h1 {
+        font-size: 28px;
+        font-weight: 700;
+      }
+      & > p {
+        margin-top: 20px;
+        margin-left: 2px;
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 50%;
+      }
+    }
+    .banner__content-popupTrack {
+      // display: none;
+      position: absolute;
+      bottom: 50px;
+      left: 24px;
+      height: 113px;
+      width: 85%;
+      overflow: hidden;
+      z-index: 20;
+      .banner__content-popup_on {
+        transform: translateX(0);
+      }
+      .banner__content-popup {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 113px;
+        width: 100%;
+        padding: 10px 10px;
+        background-color: #fff;
+        font-weight: 500;
+        z-index: 20;
+
+        transform: translateX(-100%);
+        transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+        .banner__content-popupImg {
+          width: 70px;
+          height: 100%;
+          flex-shrink: 0;
+          background-color: $photoTemp;
+          overflow: hidden;
+          & > img {
+            height: 93px;
+            width: 70px;
+            object-fit: cover;
+            cursor: pointer;
+          }
+        }
+        > .banner__content-popupTxt {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+          padding: 0 10px;
+          height: 100%;
+          //   background-color: rebeccapurple;
+          & > p {
+            font-size: 11px;
+            font-weight: 500;
+            color: $textGray;
+          }
+          & > h3 {
+            font-size: 15px;
+            font-weight: 500;
+            color: $text;
+            cursor: pointer;
+          }
+        }
+        .banner__content-popupControls {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
+          flex-shrink: 0;
+          height: 100%;
+          width: 13px;
+          .banner__content-popupClose {
+            cursor: pointer;
+          }
+        }
+      }
+      .banner__content-popup_on {
+        transform: translateX(0);
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// MEDIA 
+
+@mixin banner375 {
+  .banner {
+    height: 667px;
+    margin-bottom: 30px;
+    .banner__content{
+      & > img {
+        height: 580px;
+        left: 82%;
+      }
+      .banner__content-text {
+        left: 30px;
+        & > h1 {
+          font-size: 32px;
+        }
+      }
+      .banner__content-popupTrack {
+        left: 30px;
+        width: 84%;
+      }
+    }
+  }
+}
+
+@mixin banner480 {
+  .banner {
+    .banner__content {
+      & > img {
+        left: 75%;
+      }
+      .banner__content-text {
+        left: 10%;
+        & > h1 {
+          font-size: 36px;
+        }
+      }
+      .banner__content-popupTrack {
+        width: 280px;
+        // .banner__content-popup {
+        //   transform: translateX(-280px);
+        // }
+        // .banner__content-popup_on {
+        //   transform: translateX(0);
+        // }
+      }
+    }
+  }
+}
+@mixin banner640 {
+  .banner {
+    margin-bottom: 50px;
+    .banner__content {
+      & > img {
+        // height: 600px;
+        left: 65%;
+      }
+      .banner__content-text {
+        left: 10%;
+        & > p {
+          max-width: 60%;
+        }
+      }
+      .banner__content-popupTrack {
+        left: 50px;
+      }
+    }
+  }
+
+}
+@mixin banner768 {
+  .banner {
+    height: 1024px;
+    .banner__content {
+      & > img {
+        height: 920px;
+        left: 75%;
+      }
+      .banner__content-text {
+        & > h1 {
+          font-size: 56px;
+        }
+        & > p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@mixin banner1024 {
+  .banner {
+    .banner__content {
+      & > img {
+        left: 68%;
+      }
+      .banner__content-text {
+        & > h1 {
+          font-size: 72px;
+        }
+        
+      }
+    }
+  }
+}
+
+@mixin banner1440 {
+  .banner {
+    height: 1080px;
+    .banner__content {
+      & > img {
+        height: 970px;
+      }
+      .banner__content-text {
+        top: 50%;
+        left: 15.7%;
+        & > p {
+          max-width: none;
+        }
+      }
+    }
+  }
+}
