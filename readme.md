@@ -1,4 +1,4 @@
-﻿# Демонстрационное приложение Zonex
+﻿# Zonex
 
 Посмотреть в работе - https://curillaenator.github.io/Zonex-ClothStore/index.html
 
